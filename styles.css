@@ -5,12 +5,14 @@
 
 :root {
     --item-color: hsl(353, 63%, 41%);
+    --bg-container: hsl(35, 95%, 91%);
+    --text-color: white;
 }
 
 .container {
-    height: 700px;
+    height: 800px;
     padding: 16px;
-    background-color: hsl(35, 95%, 91%);
+    background-color: var(--bg-container);
     display: grid;
     row-gap: 16px;
     column-gap: 16px;
@@ -39,7 +41,9 @@
 }
 
 .grid-item {
-    color: white;
+    color: var(--text-color);
+    background-color: var(--item-color);
+    border: 3px solid darkred;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,32 +51,26 @@
 }
 
 #header-left {
-    background-color: var(--item-color);
     grid-area: header-left;
 }
 
 #header-large {
-    background-color: var(--item-color);
     grid-area: header-large;
 }
 
 #aside-left {
     padding: 10px;
-    background-color: var(--item-color);
     grid-area: aside-left;
 }
 
 #main {
-    background-color: var(--item-color);
     grid-area: main;
 }
 
 #aside-right {
-    background-color: var(--item-color);
     grid-area: aside-right;
 }
 
 #footer {
-    background-color: var(--item-color);
     grid-area: footer;
 }
